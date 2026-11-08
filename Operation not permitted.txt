@@ -1,0 +1,697 @@
+/mnt/d/DoR-Website-Backup/Laravel13-Upgrade$ cd /mnt/d/DoR-Website-Backup/Laravel13-Upgrade && \
+printf '\n--- abs_site_url assignments ---\n' && \
+grep -RIn --include='*.php' --exclude-dir=vendor --exclude-dir=storage \
+-E 'abs_site_url|absolute_site_path' app/Http app/Providers app/Models app/Helpers
+
+printf '\n--- Download controller beginning ---\n' && \
+sed -n '1,80p' app/Http/Controllers/DownloadController.php
+
+--- abs_site_url assignments ---
+app/Http/Controllers/Admin/AccessListController.php:21:    public $abs_site_url;
+app/Http/Controllers/Admin/AccessListController.php:27:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/AccessListController.php:49:        return view('500')->with('abs_site_url',$this->abs_site_url)
+app/Http/Controllers/Admin/AccessListController.php:55:        return view('users.access.accesslist')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AccessListController.php:79:        return view('500')->with('abs_site_url',$this->abs_site_url)
+app/Http/Controllers/Admin/AccessListController.php:85:        return view('users.access.useraccesslist')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AccessListController.php:376:        return view('500')->with('abs_site_url',$this->abs_site_url)
+app/Http/Controllers/Admin/AccessListController.php:387:        return view('users.access.editaccess')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AccessListController.php:410:        return view('500')->with('abs_site_url',$this->abs_site_url)
+app/Http/Controllers/Admin/AccessListController.php:430:        return view('users.access.usereditaccess')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AlbumController.php:27:    public $abs_site_url;
+app/Http/Controllers/Admin/AlbumController.php:33:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/AlbumController.php:61:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AlbumController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AlbumController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AlbumController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AlbumController.php:210:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AlbumController.php:217:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/AlbumController.php:223:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BannerController.php:27:    public $abs_site_url;
+app/Http/Controllers/Admin/BannerController.php:33:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/BannerController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BannerController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BannerController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BannerController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BannerController.php:199:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BannerController.php:206:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BannerController.php:212:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/BillController.php:33:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/BillController.php:58:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:67:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:84:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:90:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:126:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:185:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:195:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:224:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:231:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:237:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:281:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:366:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/BillController.php:378:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CategoryController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/CategoryController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_ur();
+app/Http/Controllers/Admin/CategoryController.php:63:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CategoryController.php:72:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CategoryController.php:89:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CategoryController.php:95:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CategoryController.php:193:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CategoryController.php:200:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CategoryController.php:206:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:22:    public $abs_site_url;
+app/Http/Controllers/Admin/CircularController.php:28:        $this->abs_site_url = ConfigurationController::abs_site_ur();
+app/Http/Controllers/Admin/CircularController.php:69:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:80:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:97:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:103:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:229:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:236:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:242:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:444:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:453:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:469:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:475:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:507:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:552:                        $home .= '<tr style="margin-top: 10px;"><td ><img src="' . $this->abs_site_url . 'uploads/circular/' . $image . '" alt="Image" /></td></tr>';
+app/Http/Controllers/Admin/CircularController.php:554:                        $home .= '<tr style="margin-top: 10px;"><td ><a href="' . $this->abs_site_url . 'uploads/circular/' . $image . '" target="_blank" download>Download</a></td></tr>';
+app/Http/Controllers/Admin/CircularController.php:586:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:595:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:619:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:626:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:632:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:664:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:673:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/CircularController.php:680:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/ContentController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/ContentController.php:65:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:74:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:92:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:99:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:263:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:271:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:277:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ContentController.php:284:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/DownloadController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/DownloadController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_ur();
+app/Http/Controllers/Admin/DownloadController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/DownloadController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/DownloadController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/DownloadController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/DownloadController.php:205:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/DownloadController.php:212:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/DownloadController.php:218:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EmailRequestController.php:31:    public $abs_site_url;
+app/Http/Controllers/Admin/EmailRequestController.php:37:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/EmailRequestController.php:51:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EmailRequestController.php:57:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EmailRequestController.php:70:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EmailRequestController.php:76:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EmailRequestController.php:226:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/EquipmentController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/EquipmentController.php:56:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:65:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:82:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:158:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:165:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:171:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:338:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/EquipmentController.php:343:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ExternalToolController.php:19:    public $abs_site_url;
+app/Http/Controllers/Admin/ExternalToolController.php:25:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/ExternalToolController.php:49:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ExternalToolController.php:58:                ->with('abs_site_url', $this->guideline_e_url)
+app/Http/Controllers/Admin/ExternalToolController.php:74:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ExternalToolController.php:79:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ExternalToolController.php:140:                    ->with('abs_site_url', $this->abs_site_ur)
+app/Http/Controllers/Admin/ExternalToolController.php:146:                    ->with('abs_site_url', $this->abs_site_ur)
+app/Http/Controllers/Admin/ExternalToolController.php:152:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ExternalToolController.php:186:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/FaqController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/FaqController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/FaqController.php:56:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/FaqController.php:65:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/FaqController.php:82:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/FaqController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/FaqController.php:169:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/FaqController.php:176:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/FaqController.php:182:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GalleryController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/GalleryController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/GalleryController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GalleryController.php:72:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GalleryController.php:89:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GalleryController.php:96:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GalleryController.php:204:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GalleryController.php:212:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GalleryController.php:218:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GuidelineController.php:20:    public $abs_site_url;
+app/Http/Controllers/Admin/GuidelineController.php:26:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/GuidelineController.php:56:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GuidelineController.php:65:                ->with('abs_site_url', $this->guideline_e_url)
+app/Http/Controllers/Admin/GuidelineController.php:82:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GuidelineController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GuidelineController.php:216:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GuidelineController.php:223:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/GuidelineController.php:230:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:29:    public $abs_site_url;
+app/Http/Controllers/Admin/HomeController.php:35:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/HomeController.php:78:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:91:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:109:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:115:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:227:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:243:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:250:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:267:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:274:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:291:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:298:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:315:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:322:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:349:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:357:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:363:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:369:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:571:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:577:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:618:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:627:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:653:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:661:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:667:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/HomeController.php:675:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LawController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/LawController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/LawController.php:56:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LawController.php:65:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LawController.php:82:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LawController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LawController.php:214:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LawController.php:221:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LawController.php:227:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LogController.php:25:    public $abs_site_url;
+app/Http/Controllers/Admin/LogController.php:31:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/LogController.php:51:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LogController.php:56:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginController.php:30:    public $abs_site_url;
+app/Http/Controllers/Admin/LoginController.php:35:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/LoginController.php:47:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginController.php:91:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginController.php:97:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginController.php:122:        return view('users.changepassword')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginController.php:149:        return view('users.changepasswordadmin')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginController.php:186:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginController.php:204:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginRequestController.php:32:    public $abs_site_url;
+app/Http/Controllers/Admin/LoginRequestController.php:38:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/LoginRequestController.php:51:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/LoginRequestController.php:57:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/NewsController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/NewsController.php:67:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsController.php:76:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsController.php:93:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsController.php:99:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsController.php:227:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsController.php:234:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsController.php:240:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsletterController.php:25:    public $abs_site_url;
+app/Http/Controllers/Admin/NewsletterController.php:31:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/NewsletterController.php:57:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsletterController.php:66:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsletterController.php:83:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsletterController.php:89:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsletterController.php:218:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsletterController.php:225:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NewsletterController.php:231:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NoticeController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/NoticeController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/NoticeController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NoticeController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NoticeController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NoticeController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NoticeController.php:223:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NoticeController.php:230:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/NoticeController.php:236:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeChiefController.php:36:    public $abs_site_url;
+app/Http/Controllers/Admin/OfficeChiefController.php:42:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/OfficeChiefController.php:66:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeChiefController.php:81:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeChiefController.php:92:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeChiefController.php:193:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeChiefController.php:363:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeController.php:30:    public $abs_site_url;
+app/Http/Controllers/Admin/OfficeController.php:36:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/OfficeController.php:61:            $editlink    = '<a href="' . $this->abs_site_url . 'admin/office/edit/' . $office->id . '"><i class="icon-edit"></i>Edit</a>';
+app/Http/Controllers/Admin/OfficeController.php:80:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeController.php:93:        return view('users.offices.addoffice')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeController.php:349:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/OfficeController.php:461:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PressController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/PressController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/PressController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PressController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PressController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PressController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PressController.php:223:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PressController.php:230:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PressController.php:237:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/Project/UserController.php:20:    public $abs_site_url;
+app/Http/Controllers/Admin/Project/UserController.php:26:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/Project/UserController.php:38:        return view('users.project.change_password')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ProjectController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/ProjectController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/ProjectController.php:63:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ProjectController.php:72:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ProjectController.php:89:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ProjectController.php:95:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ProjectController.php:232:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ProjectController.php:241:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/ProjectController.php:247:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PublicationController.php:27:    public $abs_site_url;
+app/Http/Controllers/Admin/PublicationController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/PublicationController.php:66:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PublicationController.php:75:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PublicationController.php:100:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PublicationController.php:107:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PublicationController.php:234:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PublicationController.php:241:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/PublicationController.php:247:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/SearchController.php:33:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/SearchController.php:59:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:68:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:85:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:91:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:124:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:138:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:198:                            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:209:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:237:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:244:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:250:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:256:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:294:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:310:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:394:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SearchController.php:406:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:27:    public $abs_site_url;
+app/Http/Controllers/Admin/SeoController.php:33:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/SeoController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:125:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:161:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:171:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:197:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:204:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/SeoController.php:211:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/StaffController.php:34:    public $abs_site_url;
+app/Http/Controllers/Admin/StaffController.php:40:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/StaffController.php:70:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/StaffController.php:90:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/StaffController.php:102:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/StaffController.php:229:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/StaffController.php:419:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/StaffController.php:449:        return view('staffs.staffs.emailrequest')->with('abs_site_ur', $this->abs_site_url)
+app/Http/Controllers/Admin/TenderController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/TenderController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/TenderController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TenderController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TenderController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TenderController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TenderController.php:222:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TenderController.php:229:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TenderController.php:235:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/TestimonialController.php:33:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/TestimonialController.php:58:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:67:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:84:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:90:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:123:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:175:                        ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:185:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:214:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:221:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:227:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:266:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:351:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TestimonialController.php:362:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TrainingController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/TrainingController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_ur();
+app/Http/Controllers/Admin/TrainingController.php:56:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TrainingController.php:65:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TrainingController.php:82:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TrainingController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TrainingController.php:212:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TrainingController.php:219:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/TrainingController.php:226:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserController.php:28:    public $abs_site_url;
+app/Http/Controllers/Admin/UserController.php:34:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/UserController.php:65:            ->with('abs_site_url', $this->abs_site_url);
+app/Http/Controllers/Admin/UserController.php:79:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserController.php:146:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserController.php:351:        return view('users.users.changepassword')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserController.php:393:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserController.php:430:        return view('users.users.sort_users')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserController.php:459:        return view('users.users.emailrequest')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserTypeController.php:21:    public $abs_site_url;
+app/Http/Controllers/Admin/UserTypeController.php:27:        $this->abs_site_url = ConfigurationController::abs_site_ur();
+app/Http/Controllers/Admin/UserTypeController.php:70:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/UserTypeController.php:92:        return view('users.usertype.addusertype')->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/VehicleController.php:26:    public $abs_site_url;
+app/Http/Controllers/Admin/VehicleController.php:32:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Admin/VehicleController.php:62:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/VehicleController.php:71:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/VehicleController.php:88:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/VehicleController.php:94:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/VehicleController.php:179:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/VehicleController.php:186:                    ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Admin/VehicleController.php:192:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/AlbumController.php:14:    public $abs_site_url;
+app/Http/Controllers/AlbumController.php:21:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/AlbumController.php:48:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/AlbumController.php:63:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:19:    public $abs_site_url;
+app/Http/Controllers/CircularController.php:27:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/CircularController.php:55:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:80:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:95:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:126:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:164:            //                          'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:179:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:198:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:232:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:252:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:268:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:284:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:317:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:332:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:347:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:401:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/CircularController.php:416:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ConfigurationController.php:17:    public static function abs_site_url()
+app/Http/Controllers/ConfigurationController.php:19:        return Configuration::getValueFromName('absolute_site_path');
+app/Http/Controllers/ContentController.php:17:    public $abs_site_url;
+app/Http/Controllers/ContentController.php:25:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/ContentController.php:69:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ContentController.php:87:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ContentController.php:102:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ContentController.php:154:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ContentController.php:169:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ContentController.php:217:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ContentController.php:233:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:17:    public $abs_site_url;
+app/Http/Controllers/DownloadController.php:24:         $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/DownloadController.php:49:                                                 'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:64:                                                 'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:95:                                                         'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:109:                                                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:123:                                                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:154:                                                                'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:168:                                                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:182:                                                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:231:                                                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/DownloadController.php:245:                                                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/EquipmentController.php:14:    public $abs_site_url;
+app/Http/Controllers/EquipmentController.php:22:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/EquipmentController.php:50:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/EquipmentController.php:65:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/FaqController.php:14:    public $abs_site_url;
+app/Http/Controllers/FaqController.php:22:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/FaqController.php:48:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/FaqController.php:63:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GalleryController.php:15:    public $abs_site_url;
+app/Http/Controllers/GalleryController.php:22:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/GalleryController.php:52:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GalleryController.php:68:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:18:    public $abs_site_url;
+app/Http/Controllers/GuidelineController.php:26:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/GuidelineController.php:53:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:68:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:101:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:116:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:132:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:164:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:179:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:194:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:253:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/GuidelineController.php:269:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:34:    public $abs_site_url;
+app/Http/Controllers/HomeController.php:40:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/HomeController.php:106:                            'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:136:                            'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:163:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:179:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:228:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:244:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:260:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:290:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:306:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:348:            //         'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:370:                //         'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:415:                //         'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:451:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:471:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:499:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:513:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:548:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:565:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:580:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:610:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:625:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:694:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:711:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:726:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:771:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:788:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:803:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:832:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:849:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:864:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:889:            'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/HomeController.php:973:            'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/LawController.php:17:    public $abs_site_url;
+app/Http/Controllers/LawController.php:24:              $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/LawController.php:49:                                                      'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:63:                                                      'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:96:                                                              'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:110:                                                     'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:124:                                                     'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:156:                                                             'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:170:                                                     'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:184:                                                     'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:236:                                                     'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/LawController.php:251:                                                     'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:17:    public $abs_site_url;
+app/Http/Controllers/NewsController.php:25:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/NewsController.php:52:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:67:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:100:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:115:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:130:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:163:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:178:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:193:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:247:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NewsController.php:262:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:17:    public $abs_site_url;
+app/Http/Controllers/NoticeController.php:25:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/NoticeController.php:58:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:73:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:109:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:128:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:160:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:175:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:191:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:224:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:239:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:254:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:312:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/NoticeController.php:327:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/OfficeChiefController.php:18:    public $abs_site_url;
+app/Http/Controllers/OfficeChiefController.php:26:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/OfficeChiefController.php:69:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/OfficeChiefController.php:84:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/OfficeChiefController.php:100:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/PressController.php:17:    public $abs_site_url;
+app/Http/Controllers/PressController.php:24:            $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/PressController.php:50:                                            'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:64:                                            'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:95:                                                            'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:109:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:123:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:155:                                                           'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:169:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:183:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:236:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PressController.php:250:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/Project/ProjectController.php:17:    public $abs_site_url;
+app/Http/Controllers/Project/ProjectController.php:23:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/Project/ProjectController.php:31:            ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Project/ProjectController.php:66:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/Project/ProjectController.php:126:                ->with('abs_site_url', $this->abs_site_url)
+app/Http/Controllers/ProjectController.php:15:    public $abs_site_url;
+app/Http/Controllers/ProjectController.php:23:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/ProjectController.php:50:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ProjectController.php:65:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ProjectController.php:98:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ProjectController.php:113:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/ProjectController.php:128:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:18:    public $abs_site_url;
+app/Http/Controllers/PublicationController.php:26:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/PublicationController.php:58:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:73:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:117:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:134:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:172:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:189:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:204:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:240:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:255:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:270:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:337:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/PublicationController.php:352:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/SearchController.php:11:    public $abs_site_url;
+app/Http/Controllers/SearchController.php:19:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/SearchController.php:45:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/SearchController.php:60:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:17:    public $abs_site_url;
+app/Http/Controllers/StaffController.php:25:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/StaffController.php:69:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:84:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:100:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:139:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:154:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:169:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:208:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:223:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/StaffController.php:238:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:17:    public $abs_site_url;
+app/Http/Controllers/TenderController.php:24:           $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/TenderController.php:51:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:67:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:82:                                                   'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:113:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:129:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:144:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:177:                                                          'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:191:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:205:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:237:                                                          'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:251:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:266:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:319:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TenderController.php:333:                                                  'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/TrainingController.php:15:    public $abs_site_url;
+app/Http/Controllers/TrainingController.php:23:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/TrainingController.php:53:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/TrainingController.php:68:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/TrainingController.php:102:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/TrainingController.php:117:                        'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/TrainingController.php:133:                    'abs_site_url'    => $this->abs_site_url,
+app/Http/Controllers/UserController.php:15:    public $abs_site_url;
+app/Http/Controllers/UserController.php:23:        $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/UserController.php:54:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/UserController.php:69:                        'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/UserController.php:84:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/UserController.php:118:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/UserController.php:133:                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/UserController.php:147:                                                    'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/VehicleController.php:14:    public $abs_site_url;
+app/Http/Controllers/VehicleController.php:21:          $this->abs_site_url = ConfigurationController::abs_site_url();
+app/Http/Controllers/VehicleController.php:48:                                          'abs_site_url' => $this->abs_site_url,
+app/Http/Controllers/VehicleController.php:62:                                                  'abs_site_url' => $this->abs_site_url,
+app/Models/Distance.php:26:             // $sitePath            = Configuration::getValueFromName('absolute_site_path');
+app/Helpers/Helper.php:79:        $sitePath    = Configuration::getValueFromName('absolute_site_path');
+app/Helpers/Helper.php:162:        $sitePath = Configuration::getValueFromName('absolute_site_path');
+app/Helpers/Helper.php:206:        $sitePath = Configuration::getValueFromName('absolute_site_path');
+
+--- Download controller beginning ---
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Download;
+use App\Models\Language;
+use App\Models\Office;
+use App\Models\Seo;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+use Throwable;
+
+class DownloadController extends Controller
+{
+    public $abs_site_url;
+        public $rel_site_url;
+        public $site_name;
+        public $site_link;
+        public $officeId;
+
+        public function __construct(){
+                $this->abs_site_url = ConfigurationController::abs_site_url();
+                $this->rel_site_url = ConfigurationController::rel_site_url();
+                $this->site_name = ConfigurationController::site_name();
+        }
+
+        /*
+        * get download page according to office
+        * @param string $subdomain
+        * @return Illuminate\View\View
+        */
+        public function getActiveDownloads($subdomain)
+        {
+                $officeId       = Office::getIdfromSubdomain($subdomain);
+                $languageId = Language::getIdFromCode();
+                $sessionLangId = (Session::get('language_id')) ? Session::get('language_id') : $languageId;
+                Session::put('language_id', $sessionLangId);
+
+                if($officeId > 0){
+                        $downloads      = Download::getActiveDownloads($officeId, $sessionLangId);
+                        $seoDetail      = Seo::getSeoDetailsByPageNameAndLanguage('downloads', $sessionLangId);
+                        return view('download.downloads',
+                                                array(
+                                                        'pageTitle' => $seoDetail->page_title,
+                                                        'metaDescription' => $seoDetail->meta_tags,
+                                                        'metaKeywords' => $seoDetail->meta_description,
+                                                        'abs_site_url' => $this->abs_site_url,
+                                                        'rel_site_url' => $this->rel_site_url,
+                                                        'site_name' => $this->site_name,
+                                                        'subdomain' => $subdomain,
+                                                        'downloads' => $downloads
+                                                )
+                                        );
+
+                } else {
+                        $seoDetail      = Seo::getSeoDetailsByPageNameAndLanguage('error', $sessionLangId);
+                        return view('home.404',
+                                                array(
+                                                        'pageTitle' => $seoDetail->page_title,
+                                                        'metaDescription' => $seoDetail->meta_tags,
+                                                        'metaKeywords' => $seoDetail->meta_description,
+                                                        'abs_site_url' => $this->abs_site_url,
+                                                        'rel_site_url' => $this->rel_site_url,
+                                                        'site_name' => $this->site_name,
+                                                        'subdomain' => $subdomain
+                                                )
+                                        );
+                }
+        }
+
+        /*
+        * get download page according to office
+        * @param string $subdomain
+        * @param string $url
+        * @return Illuminate\View\View
+        */
+        public function getDownloadDetail($subdomain, $url)
+        {
+doradmin@HMIS-ICT-SDE:/mnt/d/DoR-Website-Backup/Laravel13-Upgrade$
